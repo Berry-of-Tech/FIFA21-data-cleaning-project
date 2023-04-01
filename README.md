@@ -8,6 +8,8 @@ Being a newbie in the data space, I decided to participate in this challenge aft
 
 [FIFA 21 messy, raw dataset for cleaning/exploring | Kaggle](https://www.kaggle.com/datasets/yagunnersya/fifa-21-messy-raw-dataset-for-cleaning-exploring)
 
+---
+
 ### 2. **What to consider when cleaning your data**
 
 - Incorrect data types
@@ -18,6 +20,8 @@ Being a newbie in the data space, I decided to participate in this challenge aft
 - Irrelevant data
 - Outliers
 
+---
+
 ### 3. **Preview of the unclean data**
 
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/Unclean%20data%201.png)
@@ -25,6 +29,8 @@ Being a newbie in the data space, I decided to participate in this challenge aft
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/Unclean%20data%202.png)
 
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/Unclean%20data%203.png)
+
+---
 
 ### 4. **Observations from our previewed data**
 
@@ -37,6 +43,8 @@ Being a newbie in the data space, I decided to participate in this challenge aft
 - The hits column have rows that are represented by K in abbreviation of thousand and also contain null values.
 - The club columns have some rows with unwanted characters like '1' and '.'
 - Misspelling in the LongName column
+
+---
 
 ### 5. **The data-cleaning process**
 
@@ -71,6 +79,8 @@ Result after cleaning
 
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/clean%20SM%20and%20IR%20data.png)
 
+---
+
 II. Updating the height and weight columns for consistency.
 ```SQL
 -- converting all values in height to cm
@@ -91,6 +101,8 @@ SET weight = CASE  WHEN weight like '%kg' THEN TRY_CONVERT(DECIMAL(18,0), SUBSTR
 The result after the cleaning
 
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/clean%20height%20and%20weight%20data.png)
+
+---
 
 III. Next we clean the value, wage, and release clause columns by converting them to appropriate values and removing the euro sign.
 
@@ -130,6 +142,8 @@ The result after the cleaning
 
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/clean%20value%20and%20wage%20.png)
 
+---
+
 IV. Next we update the contract column delimiter and create two new columns, the contract start year and the contract end year and populate it using the contract column.
 
 ```SQL
@@ -168,6 +182,8 @@ WHERE contract LIKE '%-%' OR contract LIKE '%Free%' OR contract LIKE '%loan%'
 The result after cleaning
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/clean%20split%20contract.png)
 
+---
+
 V. Next we remove unwanted characters from the club and hits columns and update the hits column by converting K and adding 0 to the nulls value for easy analysis.
 
 ```SQL
@@ -193,6 +209,8 @@ SET hits =  CASE WHEN hits IS NULL
 The result after cleaning
 
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/clean%20club%20and%20hits%20data.png)
+
+---
 
 VI. Next, we used the playerURL column to get the clean full name of the players and update the LongName column and also check for duplicate
 
@@ -223,6 +241,8 @@ The result after cleaning
 
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/clean%20fullname%20data%20.png)
 
+---
+
 VII. To check if there are duplicate
 
 ```SQL
@@ -237,6 +257,8 @@ The result after checking
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/clean%20duplicate%20ID.png)
 
 There are no duplicates, we used the ID column to check for duplicates because it's a unique column which must not have duplicates, however there are duplicates in the name column, this shows that they have different contracts in different years.
+
+---
 
 VIII. Changing column names, all columns to the right data type and dropping irrelevant columns.
 
@@ -331,6 +353,8 @@ EXEC sp_rename 'fifa_data.PHY', 'PHY(physicality)', 'COLUMN'
  
 ```
 
+---
+
 ### 6. **Conclusion**
 
 This project helped me learn other SQL syntax I was not exposed to earlier. Being my first project with SQL. I will appreciate your honest feedback. You can check out the new and clean dataset below
@@ -343,6 +367,7 @@ This project helped me learn other SQL syntax I was not exposed to earlier. Bein
 
 ![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/Clean%20fifa%20data%204.png)
 
+---
 
 ### 7. **Challenges encountered during the cleaning process**
 

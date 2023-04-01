@@ -375,8 +375,8 @@ I. The first time I thought I was done with the cleaning, I discovered some data
 II. I had to drop my tables twice and import the complete data because of errors and importing using the wrong code name.
 You can connect with me on:
 
-- [My linkedIn Profile](https://medium.com/r/?url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Falajede-mustapha-6071211a9%2F "My LinkedIn Profile")
+- [My linkedIn Profile](https://www.linkedin.com/in/alajede-mustapha-6071211a9/ "My LinkedIn Profile")
 
-- [My Twitter Profile](https://medium.com/r/?url=https%3A%2F%2Ftwitter.com%2FBerry_Analyst "My Twitter Profile")
+- [My Twitter Profile](https://twitter.com/Berry_Analyst "My Twitter Profile")
 
 Thanks for Reading!!!

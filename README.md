@@ -4,7 +4,7 @@
 
 Being a newbie in the data space, I decided to participate in this challenge after I completed my SQL course on UDACITY. The challenge was organized by the Twitter data community which gives newbies the opportunity to create a portfolio project. As a participant I used SQL server as a tool. Let me introduce the dataset. The dataset was gotten from Kaggle.
 
-![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/Fifa%2021%20logo.jpg)
+![](https://github.com/Berry-of-Tech/FIFA21-data-cleaning-project/blob/main/Fifa%2021.jpg)
 
 [FIFA 21 messy, raw dataset for cleaning/exploring | Kaggle](https://www.kaggle.com/datasets/yagunnersya/fifa-21-messy-raw-dataset-for-cleaning-exploring)
 
